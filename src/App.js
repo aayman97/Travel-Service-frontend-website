@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -7,23 +6,23 @@ function App() {
   const lines = document.querySelector(".lines")
   const buttonsconatiner = document.querySelector(".buttonsconatiner")
   let menuOpen = false
-  menubttn.addEventListener('click',() =>{
+  menubttn.addEventListener('click',(e) =>{
+   
     if(!menuOpen){
       menubttn.classList.add('menubttnanimation')
       buttonsconatiner.classList.add('buttonsconatineranimation')
       navigationbar.classList.add('navigationbaranimation')
       lines.classList.add('open')
       menuOpen=true
-  
-    }else{
+    }
+    else{
       menubttn.classList.remove('menubttnanimation')
       buttonsconatiner.classList.remove('buttonsconatineranimation')
       navigationbar.classList.remove('navigationbaranimation')
       lines.classList.remove('open')
-      menuOpen=false
-     
+      menuOpen=false  
     }
-   
+
   })
   return (
     <div className="App">
@@ -40,7 +39,17 @@ function App() {
       </div>
 
       <div className="besthotels">
+        <h1>
+          Best hotels all<br></br> over the world
+        </h1>
+        <h5>
+      Wide offer of modern hotels with high quality service. Compare prices from hundreds of travel sites and get great deals. See our best recommendations for your best journey.
+        </h5>
 
+        <div className="buttonsContainer">
+          <button className="buttonstyle">Start</button>
+          <button  className="buttonstyle second">Create an account</button>
+        </div>
       </div>
 
       <div className="images">

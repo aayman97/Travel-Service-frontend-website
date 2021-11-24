@@ -19,7 +19,7 @@
 
 .navigationbar{
   background-color: rgba(47,48,55,255);
-  width : 50%;
+  width : 80px;
   height: 95%;
   border-radius: 20px 20px 20px 20px;
   display: flex;
@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: center;
   transition: all 0.5s ease-in-out;
-  
+  position: fixed;
 
 }
 .buttonsconatiner{
@@ -35,6 +35,7 @@
   width :70%;
   background-color: wheat;
   transition: all 0.5s ease-in-out;
+
 }
 .menubuttonscontainer{
   cursor: pointer;
@@ -57,6 +58,9 @@
   background-color:#52555b;
   border-radius: 10px 10px 10px 10px;
   transition: all 0.5s ease-in-out;
+  transform: translateX(-45px);
+  background: transparent;
+  box-shadow: none;
 }
 .lines::after{
   position: absolute;
@@ -65,8 +69,9 @@
   height: 5px;
   background-color:#52555b;
   border-radius: 10px 10px 10px 10px;
-  transform: translateY(-10px);
+  /* transform: translateY(-10px); */
   transition: all 0.5s ease-in-out;
+  transform: rotate(45deg) translate(32px,-32px)
 }
 .lines::before{
   position: absolute;
@@ -75,13 +80,14 @@
   height: 5px;
   background-color:#52555b;
   border-radius: 10px 10px 10px 10px;
- transform: translateY(10px);
+ /* transform: translateY(10px); */
  transition: all 0.5s ease-in-out;
+ transform: rotate(-45deg) translate(32px,32px);
 
 }
 .open{
-  transform: translateX(-45px);
-  background: transparent;
+  transform: translateX(0px);
+  background: #52555b;
   box-shadow: none;
 }
 .open::before{
@@ -90,7 +96,7 @@
   height: 5px;
   background-color:#52555b;
   border-radius: 10px 10px 10px 10px;
-  transform: rotate(-45deg) translate(32px,32px);
+  transform: translateY(10px);
 
 }
 .open::after{
@@ -99,11 +105,14 @@
   height: 5px;
   background-color:#52555b;
   border-radius: 10px 10px 10px 10px;
-  transform: rotate(45deg) translate(32px,-32px)
+  transform: translateY(-10px);
 }
 .navigationbaranimation{
-  height : 9%;
+  width :80px;
+  height: 9%;
+  border-radius: 20px 20px 20px 20px;
   transform: translateY(43vh);
+ position: fixed;
 }
 .buttonsconatineranimation
 {
@@ -113,14 +122,72 @@ background-color: transparent;
 
 }
 .menubttnanimation{
-  transform: translateY(20px);
+  transform: translateY(18px);
+
 }
 /* ............................. */
 .besthotels{
-background-color: black;
-flex : 1;
+
+display: flex;
+flex : 0.7;
+justify-content: center;
+align-items: flex-start;
+flex-direction: column;
+padding-left: 80px;
+
 }
+
+.besthotels h1{
+  color:  white;
+  font-size:4.5rem;
+  font-weight: 500;
+  width: 90%;
+  line-height: 4.9rem;
+  letter-spacing:3px;
+ 
+}
+.besthotels h5{
+  color : rgba(255,255,255,0.5);
+  width: 90%;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 17px;
+  
+  margin-top: -20px;
+  /* align-self: flex-start; */
+}
+.buttonsContainer{
+  width: 65%;
+  height: 7%;
+  /* background-color: royalblue; */
+  display: flex;
+align-items: center;
+}
+.buttonstyle{
+ background-color: transparent;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 10px 10px 10px 10px;
+  font-weight: bold;
+}
+.second{
+  margin-left: 10px;
+}
+.buttonstyle:hover{
+  background-color: white;
+  color : #52555b;
+}
+/* .................................. */
 .images{
 background-color: blueviolet;
-flex : 1;
+flex : 1.3;
 }
